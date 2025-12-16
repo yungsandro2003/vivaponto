@@ -61,7 +61,7 @@ npm run server  # Inicia apenas o backend
 
 ## Estrutura do Banco de Dados
 
-O banco de dados é criado automaticamente ao iniciar o servidor com índices otimizados para performance.
+O banco de dados é criado automaticamente ao iniciar o servidor com índices otimizados para performance. (após executar o projeto o banco é resetado).
 
 ### Tabelas
 
@@ -86,12 +86,6 @@ O banco de dados é criado automaticamente ao iniciar o servidor com índices ot
 - **Índice:** user_id - rastreia mudanças de turno ao longo do tempo
 
 ## Funcionalidades Globais
-
-### Botão de Refresh (NOVO)
-- Disponível em todas as telas (Admin e Funcionário)
-- Ícone circular no header ao lado do nome do usuário
-- Força atualização dos dados sem recarregar a página
-- Garante visualização de dados mais recentes
 
 ---
 
@@ -217,24 +211,6 @@ npm run build
 
 Os arquivos compilados estarão em `dist/`.
 
-## Estrutura de Pastas
-
-```
-vivaponto/
-├── server/                 # Backend
-│   ├── routes/            # Rotas da API
-│   ├── middleware/        # Middlewares (auth)
-│   ├── database.js        # Configuração do SQLite
-│   ├── setup.js           # Script de inicialização
-│   └── index.js           # Servidor Express
-├── src/                   # Frontend
-│   ├── components/        # Componentes React
-│   ├── contexts/          # Context API (Auth)
-│   ├── services/          # API client
-│   └── App.tsx            # Componente principal
-└── database.sqlite        # Banco de dados (gerado automaticamente)
-```
-
 ## Segurança
 
 - Senhas criptografadas com bcrypt
@@ -250,8 +226,3 @@ O projeto está configurado com:
 - Hot reload no frontend (Vite)
 - Proxy automático `/api` → `http://localhost:3000`
 - TypeScript para tipagem estática
-- ESLint para qualidade de código
-
-## Licença
-
-Projeto desenvolvido para fins educacionais.
